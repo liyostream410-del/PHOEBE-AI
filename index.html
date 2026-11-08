@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10101a">
+  <title>Phoebe AI — Character Preview</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">P</div>
+      <div>
+        <p class="eyebrow">PROJECT COMPANION</p>
+        <h1>PHOEBE <span>AI</span></h1>
+      </div>
+      <div class="status"><i></i> MODEL PREVIEW</div>
+    </header>
+
+    <section class="stage-card" aria-label="3D character preview">
+      <div id="viewer" class="viewer">
+        <div id="loading" class="loading">
+          <div class="spinner"></div>
+          <strong>Preparing Phoebe…</strong>
+          <span>Loading the 3D character model</span>
+        </div>
+        <div id="error" class="error hidden">
+          <strong>Model could not be loaded</strong>
+          <span id="error-message">Check that assets/models/phoebe.glb exists and that you opened the app through a local web server or GitHub Pages.</span>
+        </div>
+        <div class="stage-label">3D CHARACTER • PREVIEW 01</div>
+        <div class="drag-hint">Drag to rotate · Pinch to zoom</div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div>
+        <p class="eyebrow">YOUR DIGITAL COMPANION</p>
+        <h2>Hello, I'm Phoebe.</h2>
+        <p class="sub">My character preview is ready. Voice, expressions and the offline AI brain will be added in later development steps.</p>
+      </div>
+      <div class="chips"><span>3D MODEL</span><span>ANDROID FIRST</span><span>OFFLINE-READY PLAN</span></div>
+    </section>
+
+    <nav class="toolbar" aria-label="Preview controls">
+      <button id="reset" type="button">Reset view</button>
+      <button id="spin" type="button" aria-pressed="false">Auto rotate: off</button>
+    </nav>
+    <footer>PHOEBE AI · EARLY DEVELOPMENT BUILD</footer>
+  </main>
+  <script type="module" src="./src/viewer.js"></script>
+</body>
+</html>
